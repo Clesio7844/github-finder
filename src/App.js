@@ -1,13 +1,24 @@
-import React from 'react';
+import React, { Component } from 'react';
+import Navbar from './components/layout/Navbar';
+import User from './components/users/Users';
 
 import './App.css';
 
-function App() {
-  return (
-    <div className='App'>
-      <h1>hello world</h1>
-    </div>
-  );
+class App extends Component {
+  componentDidMount() {
+    console.log(123);
+  }
+
+  render() {
+    return (
+      <div className='App'>
+        <Navbar />
+        <div className='container'>
+          <User />
+        </div>
+      </div>
+    );
+  }
 }
 
 export default App;
